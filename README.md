@@ -26,8 +26,13 @@ By default, `deltapq` operates on two qm-files and takes the elementwise differe
 
 ## Installation
 The script depends on numpy and on the horton program. 
+Install the depedencies and clone the repository.
+```
+git clone 
+https://github.com/peter-reinholdt/deltapq.git
+```
 
-### With conda
+### Installing dependencies with conda
 ```
 conda install numpy
 conda install -c theochem horton
