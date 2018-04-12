@@ -1,5 +1,8 @@
 # deltapq
-Subtract density matrices
+A small script that can be used to manipulate density matrices and output cube-files.
+A common usage is subtracting two density matrices of structures with slightly different geometry.
+
+## Usage
 ```
 usage: deltapq.py [-h] [-i QM_FILES_IN [QM_FILES_IN ...]] [-o out.cube]
                   [--operation OPERATION] [--cube-buffer CUBE_BUFFER]
@@ -18,4 +21,14 @@ optional arguments:
                         Size of buffer region to determine box dimensions
   --cube-density CUBE_DENSITY
                         Number of points [per bohr] in box
+```
+By default, `deltapq` operates on two qm-files and takes the elementwise difference of the density matrix, but custom operations can be defined through the `--operation` option. For example, to evaluate the `sin()` of a single density matrix, use `--operation sin([0])`.
+
+## Installation
+The script depends on numpy and on the horton program. 
+
+### With conda
+```
+conda install numpy
+conda install -c theochem horton
 ```
